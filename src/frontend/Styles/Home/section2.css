@@ -1,0 +1,118 @@
+.section2-container{
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.section2-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.about1{
+    display: flex;
+    flex-direction: column;
+}
+.about1-1{
+    font-family: Lexend; /* Heading */
+    font-size: 52px; 
+    font-weight: 700; 
+    line-height: 74px; 
+    color: #323743FF; /* neutral-700 */
+
+}
+.about1-2 img{
+    width: 260px; 
+    height: 30px; 
+    border-radius: 0px; 
+    position: relative;
+    object-fit: contain;
+}
+.about2 p{
+ 
+    height: 150px; 
+    font-family: Manrope; /* Body */
+    font-size: 20px; 
+    font-weight: 400; 
+    line-height: 30px; 
+    color: #323743FF; /* neutral-700 */
+}
+.learnbutton{
+
+  width: 242px; 
+  height: 52px; 
+  padding: 0 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: Manrope; /* Body */
+  font-size: 18px; 
+  font-weight: 400; 
+  line-height: 28px; 
+  color: #6D31EDFF; /* primary-500 */
+  background: #FFFFFFFF; /* white */
+  opacity: 1; 
+  border-radius: 26px; 
+  border-width: 1px; 
+  border-color: #6D31EDFF; /* primary-500 */
+  border-style: solid; 
+  cursor: pointer;
+}
+/* Hover */
+.learnbutton:hover {
+  background: #5113D7FF; /* primary-600 */
+  color: #FFFFFFFF; /* white */
+}
+/* Pressed */
+.learnbutton:hover:active {
+  color: #3F0EA6FF; /* primary-700 */
+  background: #FFFFFFFF; /* white */
+}
+/* Disabled */
+.learnbutton:disabled {
+  opacity: 0.4; 
+}
+.section2-2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.girlimage{
+
+    height: 517px; 
+    background: #F0F9FFFF;
+    border-radius:50% 50% 0% 0% ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.girlimage img{
+   height: 100%;
+   width: auto;
+}
+@media screen and (max-width:750px) {
+  
+  .section2-container{
+    flex-direction: column;
+  }
+
+  .girlimage{
+    position: relative;
+    top: 20px;
+    height: 417px;
+  }
+  .about1-2 img{
+    position: relative;
+
+}
+.about1-1{
+  font-size: 50px;
+}
+.about2 p{
+  height: 100%;
+}
+}

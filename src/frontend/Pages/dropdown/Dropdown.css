@@ -1,0 +1,44 @@
+.popup-menu-container {
+    position: relative;
+  }
+  
+  .popup-menu-trigger {
+    cursor: pointer;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 2px;
+    position: relative;
+    right: 24px;
+  }
+  
+  .popup-menu {
+    position: absolute;
+    top: 25px;
+    right: 48px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: max-content;
+  }
+  
+  .popup-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .popup-menu ul li {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .popup-menu ul li:hover {
+    background-color: #f0f0f0;
+  }
+  

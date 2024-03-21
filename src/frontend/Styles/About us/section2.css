@@ -1,0 +1,72 @@
+.A-section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+.A-section2-1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items:center;
+    justify-content:flex-start;
+    gap: 10px;
+}
+.A-section2-1 h2{
+    font-size: 4rem;
+    
+}
+.A-section2-1 p{
+    font-size: 1.3rem;
+  width: 65%;
+
+}
+.A-section2-2{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.Team{
+    height: 400px;
+    width: 300px;
+    border: 1px solid rgb(222, 222, 222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Team-image{
+    width: 100%;
+    height: 200px;
+    background-color:rgb(211, 211, 211) ;
+}
+.Team-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10%;
+  
+}
+.Team-info p{
+    font-size: 1rem;
+    width: 75%;
+}
+@media screen and (max-width:750px) {
+
+    .A-section2-2{
+        flex-direction: column;
+    }
+    .A-section2-1 h2{
+        font-size: 3rem;
+        
+    }
+    .A-section2-1 p{
+        font-size: 0.8rem;
+      width: 90%;
+    
+    }
+}

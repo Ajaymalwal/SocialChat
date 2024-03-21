@@ -1,0 +1,154 @@
+.footer{
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+ height: 300px;
+ background-color: #f3f3f3;
+ position: relative;
+}
+.footer-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.footer-1 h2{
+  font-size: 50px;
+}
+.footer-2{
+  justify-content: space-around;
+  display: flex;
+}
+.footer-2 p{
+  font-size: 25px;
+  color: #424856;
+}
+.footer-2 div:nth-child(2){
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Textbox 35 */
+.textbox {
+  display: flex;
+  opacity: 1; 
+}
+.textbox input {
+  width: 264px; 
+  height: 44px; 
+  padding-left: 44px; 
+  font-family: Manrope;
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 26px; 
+  background: #EAECF0FF;
+  border-radius: 22px 0px 0px 22px;
+  border-width: 0px; 
+  outline: none; 
+}
+
+
+/* hover */
+.textbox input:hover {
+  color: #BDC1CAFF; /* neutral-400 */
+  background: #EAECF0FF; /* neutral-250 */
+}
+/* focused */
+.textbox input:focused {
+  color: #BDC1CAFF; /* neutral-400 */
+  background: #FFFFFFFF; /* white */
+}
+/* disabled */
+.textbox input:disabled {
+  color: #BDC1CAFF; /* neutral-400 */
+  background: #EAECF0FF; /* neutral-250 */
+}
+
+/* Button 42 */
+.sendbutton {
+  width: 112px; 
+  height: 44px; 
+  padding: 0 16px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: Manrope; 
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 26px; 
+  color: #FFFFFFFF; 
+  background: #6D31EDFF;
+  opacity: 1; 
+  border: none; 
+  border-radius: 0px 22px 22px 0px; 
+  cursor: pointer;
+}
+/* Hover */
+.sendbutton:hover {
+  color: #FFFFFFFF;
+ 
+}
+/* Pressed */
+.sendbutton:hover:active {
+  color: #FFFFFFFF; 
+  background: #3F0EA6FF; 
+}
+/* Disabled */
+.sendbutton:disabled {
+  opacity: 0.4; 
+}
+.footer-logo{
+
+    height: 130px;
+    width: 130px;
+    position: relative;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.footer-logo img{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 30px;
+}
+.footer-menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.love{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+@media screen and (max-width:750px) {
+  .footer{
+    height: 250px;
+  }
+.footer-2 p{
+  font-size:1rem ;
+
+}
+.textbox input{
+  width: 100%;
+}
+  
+}

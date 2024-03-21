@@ -1,0 +1,146 @@
+.section3{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.section3 h2{
+    font-family: Lexend; /* Heading */
+  font-size: 52px; 
+  font-weight: 700; 
+  line-height: 74px; 
+  color: #323743FF; /* neutral-700 */
+}
+.home-features{
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    gap: 30px;
+
+}
+.feature-box1{
+    display: flex;
+    justify-content: space-around;
+
+}
+.feature-box1 div img{
+    width: 162px; 
+    height: 180px; 
+    border-radius: 0px;
+}
+.feature-box2{
+    display: flex;
+   
+
+}
+
+.box h3{
+    font-family: Lexend; /* Heading */
+    font-size: 32px; 
+    font-weight: 700; 
+    line-height: 48px; 
+    color: #323743FF; /* neutral-700 */
+}
+.box:nth-child(odd) p{
+    width: 320px; 
+    font-family: Manrope; /* Body */
+    font-size: 20px; 
+    font-weight: 400; 
+    line-height: 30px; 
+    color: #323743FF; /* neutral-700 */
+    
+}
+.box:nth-child(even) p{
+    font-family: Manrope; /* Body */
+    font-size: 20px; 
+    font-weight: 400; 
+    line-height: 22px; 
+    color: #171A1FFF; /* neutral-900 */
+    
+}
+.box1{
+    
+    width: 30%;
+    background: #FFC9E2FF; /* tertiary1-200 */
+    border-radius: 20px; 
+    overflow: hidden;
+
+}
+.box2{
+    width: 65%;
+    
+    background: #D3C1FAFF; /* primary-200 */
+    border-radius: 20px; 
+    overflow: hidden;
+    
+}
+.box3{
+    width: 65%;
+    background: #FDCFC4FF; /* tertiary3-200 */
+  border-radius: 20px; 
+  overflow: hidden;
+    
+}
+.box4{
+    width: 30%;
+    background: #F0F9FFFF; /* secondary-100 */
+    border-radius: 20px; 
+    overflow: hidden;
+}
+.box1 img{
+    position: relative;
+    left: 60%;
+    bottom: 30%;
+}
+.box4 img{
+    position: relative;
+    left: 60%;
+  
+}
+.box2 img{
+    left: 80%;
+    position: relative;
+   bottom: 20%;
+}
+.box3 img{
+    left: 60%;
+    bottom: 40%;
+    position: relative;
+
+}
+.box{
+    padding: 1%;
+    height: 300px;
+}
+.box p:nth-child(3){
+    position: relative;
+    top: 30%;
+    font-family: Manrope; /* Body */
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 26px; 
+  cursor: pointer;
+  text-decoration: underline;
+  color: #EF3607FF; /* tertiary3-600 */
+}
+@media  screen and (max-width:750px) {
+    .feature-box1{
+        flex-direction: column;
+        
+        gap: 20px;
+    }
+    .feature-box2{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .box{
+        width: 100%;
+        padding: 5px;
+    }
+    .box1 img{
+        left: 70%;
+    }
+    .box3 img{
+        top: 0px;
+    }
+}
