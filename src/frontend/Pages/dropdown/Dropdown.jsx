@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Dropdown.css'; // Import your CSS file
 import ConfirmationBox from '../Components/confirmBox';
+import RemoveMember from '../../../backend/RemoveMember/removemember';
 
-const PopupMenu = () => {
+const PopupMenu = ({roomId}) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef();
-   {/*Confirmation box for the leave room */}
+  const navigate = useNavigate();
    const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
    const handleLogout = () => {
        setIsConfirmationOpen(true);
      };
    
-     const handleConfirmLogout = () => {
-       // Perform logout action here
-       alert('You sucessfully leave the room!');
+     const handleConfirmLogout = async() => {
+    await  RemoveMember(roomId); 
        setIsConfirmationOpen(false);
+       navigate("/Dashboard")
      };
    
      const handleCancelLogout = () => {

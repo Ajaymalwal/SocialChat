@@ -2,6 +2,8 @@
     position: relative;
     cursor: pointer;
     top: 5px;
+    height: calc(100vh - 75px);
+   margin-bottom: 100px;
   }
   .room-tab{
     background:transparent;
@@ -25,6 +27,7 @@
     position: relative;
     top: 12px;
     width: 7%;
+    left: 12.6%;
     transition: left 0.5s;
   
   }
@@ -33,6 +36,7 @@
     top: 28px;
     height: 2px;
     width: 100%;
+    z-index: 1;
     background-color: rgba(63, 63, 63, 0.68);
   }
   .allrooms{
@@ -46,6 +50,7 @@
     height: 100%;
     padding-left: 150px;
     padding-right: 150px;
+    overflow-y: scroll;
     box-sizing: border-box;
   }
   .roomcontainer{
@@ -95,4 +100,32 @@
     display: flex;
     justify-content: space-between;
 
+  }
+  @media screen and (max-width:750px) {
+    .room-tab{
+      font-size: 0.8rem;
+    }
+    .underline{
+      left: 4%;
+      width: 21%;
+    }
+    .allrooms{
+      padding-left: 0%;
+      padding-right: 0%;
+      gap: 5%;
+      top: 40px;
+    }
+    .roomcontainer{
+      top: 20px;
+      height: 150px;
+      width: 40%;
+    }
+    .roomdisc{
+      font-size: 0.8em;
+    }
+    .roomdisc p:last-child{
+      font-size: 0.8rem;
+    }
+
+    
   }

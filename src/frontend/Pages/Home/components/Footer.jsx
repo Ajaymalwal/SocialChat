@@ -16,8 +16,8 @@ function Footer() {
       <div className='footer-2'>
         <div className='footer-logo'><img src={logo} alt="Logo" /></div>
         <div className='footer-menu'>
-        <p><Link to="/About">About Us</Link></p>
-        <p><Link to="Features"> Features</Link></p>
+        <p><Link to="/About" style={{textDecoration:"none",color:"#424856"}}>About Us</Link></p>
+        <p><Link to="/Features" style={{textDecoration:"none",color:"#424856"}}> Features</Link></p>
         <p>FAQ</p>
         </div>
       </div>

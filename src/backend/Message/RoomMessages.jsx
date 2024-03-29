@@ -12,28 +12,6 @@ function PushMessage(messagefile,roomId){
      push(messageRef,{messagefile})
 
 }
-/*
-async function GetMessages(roomId) {
-  
-  const messagesRef = ref(database, `Rooms/public/${roomId}/messages`);
-  const accumlatedMessages = []
- await onValue(messagesRef, (snapshot) => {
-      const newItems = snapshot.val();
-      if (newItems) {
-          const receivedMessages = Object.values(newItems);
-        
-          receivedMessages.forEach((e) => accumlatedMessages.push({ ...e.messagefile }))
-          console.log(accumlatedMessages)
-          
-      }
-  }, (errorObject) => {
-      console.log('The read failed: ' + errorObject.name);
-  });
-  await new Promise((resolve) => setTimeout(resolve, 100));
-  return accumlatedMessages;
- // Return the messages array
-}
-*/
 
 async function  GetRoomMembers(roomId){
    
@@ -44,7 +22,7 @@ async function  GetRoomMembers(roomId){
             const newItems = snapshot.val()
             if(newItems){
                 const receivedMembers = Object.values(newItems);
-                console.log("receivedMemers",receivedMembers)
+                console.log("receivedMembers",receivedMembers)
 
                
                for(const i in receivedMembers){

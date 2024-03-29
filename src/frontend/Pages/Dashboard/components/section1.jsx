@@ -70,7 +70,7 @@ function RoomOptions() {
           Explore Rooms
         </button>
       </div>
-      <div className="underline" style={{ left: `${underlinePosition === 'public' ? '12.6%' : underlinePosition === 'private' ? '46%' : "80%"}` }}>      </div>
+      <div className="underline" style={{ left: `${underlinePosition === 'public' ? '' : underlinePosition === 'private' ? '46%' : "80%"}` }}>      </div>
 
       <div className="horiline"></div>
       <div className="allrooms">
@@ -78,7 +78,7 @@ function RoomOptions() {
           
           joinedRooms.map((room,index)=>
             <>
-          <div className="roomcontainer" key={index} onClick={()=>{ navigate("/Inbox",{ state: {roomId:  room.id } })}}>
+          <div className="roomcontainer" key={index} onClick={()=>{ navigate("/Inbox",{ state: {roomId:  room.id , RoomName: room.RoomName, RoomMemberCount:room.memberCount} })}}>
           <div className="roomimage" ><img src={RoomImage} alt="" /></div>
             <div className="roomdisc" >
               <h3>{room.RoomName}</h3>

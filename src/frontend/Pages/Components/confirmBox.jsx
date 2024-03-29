@@ -6,7 +6,7 @@ const ConfirmationBox = ({ isOpen, message, onConfirm, onCancel }) => {
   return (
     <div className={`confirmation-box ${isOpen ? 'open' : ''}`}>
       <div className="confirmation-box-content">
-      <span class="close" onClick={onCancel}>&times;</span>
+      <span className="close" onClick={onCancel}>&times;</span>
         <p>{message}</p>
         <div className="confirm-boxButton-contaienr">
         <button onClick={onConfirm}>Yes</button>

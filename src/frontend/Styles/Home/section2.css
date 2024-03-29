@@ -34,7 +34,6 @@
 .about2 p{
  
     height: 150px; 
-    font-family: Manrope; /* Body */
     font-size: 20px; 
     font-weight: 400; 
     line-height: 30px; 
@@ -103,7 +102,7 @@
   .girlimage{
     position: relative;
     top: 20px;
-    height: 417px;
+    height: 390px;
   }
   .about1-2 img{
     position: relative;
@@ -114,5 +113,11 @@
 }
 .about2 p{
   height: 100%;
+  font-size: 0.8rem;
+}
+.learnbutton{
+  width: 150px;
+  height: 40px;
+  font-size: 0.8rem;
 }
 }

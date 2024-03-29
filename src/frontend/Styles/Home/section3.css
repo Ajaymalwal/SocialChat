@@ -35,41 +35,37 @@ align-items: center;
 }
 
 .box h3{
-    font-family: Lexend; /* Heading */
+    font-family: Lexend;
     font-size: 32px; 
     font-weight: 700; 
     line-height: 48px; 
-    color: #323743FF; /* neutral-700 */
+    color: #323743FF;
 }
 .box:nth-child(odd) p{
-    width: 320px; 
-    font-family: Manrope; /* Body */
-    font-size: 20px; 
+ 
+
     font-weight: 400; 
     line-height: 30px; 
-    color: #323743FF; /* neutral-700 */
-    
+    color: #323743FF; 
 }
 .box:nth-child(even) p{
-    font-family: Manrope; /* Body */
-    font-size: 20px; 
+ 
     font-weight: 400; 
-    line-height: 22px; 
-    color: #171A1FFF; /* neutral-900 */
+    line-height: 30px; 
+    color: #171A1FFF; 
     
 }
 .box1{
     
     width: 30%;
-    background: #FFC9E2FF; /* tertiary1-200 */
+    background: #FFC9E2FF;
     border-radius: 20px; 
     overflow: hidden;
 
 }
 .box2{
     width: 65%;
-    
-    background: #D3C1FAFF; /* primary-200 */
+    background: #D3C1FAFF;
     border-radius: 20px; 
     overflow: hidden;
     
@@ -90,12 +86,12 @@ align-items: center;
 .box1 img{
     position: relative;
     left: 60%;
-    bottom: 30%;
+    bottom: 20%;
 }
 .box4 img{
     position: relative;
     left: 60%;
-  
+   bottom: 20%;
 }
 .box2 img{
     left: 80%;
@@ -103,30 +99,23 @@ align-items: center;
    bottom: 20%;
 }
 .box3 img{
-    left: 60%;
-    bottom: 40%;
+    left: 80%;
+    bottom: 20%;
     position: relative;
 
 }
 .box{
     padding: 1%;
+    font-size: 20px;
     height: 300px;
 }
-.box p:nth-child(3){
+.box>a{
     position: relative;
-    top: 30%;
-    font-family: Manrope; /* Body */
-  font-size: 16px; 
-  font-weight: 400; 
-  line-height: 26px; 
-  cursor: pointer;
-  text-decoration: underline;
-  color: #EF3607FF; /* tertiary3-600 */
+
 }
 @media  screen and (max-width:750px) {
     .feature-box1{
         flex-direction: column;
-        
         gap: 20px;
     }
     .feature-box2{
@@ -136,6 +125,9 @@ align-items: center;
     .box{
         width: 100%;
         padding: 5px;
+    }
+    .box p{
+        font-size: 14px;
     }
     .box1 img{
         left: 70%;

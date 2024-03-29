@@ -33,7 +33,7 @@ import { useNavigate } from 'react-router-dom';
   <p>
     Welcome to the
 SocialChat   </p>
-    <p> Connect to the world, with SocialChat</p>
+    <p>Building Bridges Through Virtual Rooms.</p>
    
  
     <input type="button" value="Sign Up" className='button' onClick={()=>{navigate('/Sign-up')}}/>

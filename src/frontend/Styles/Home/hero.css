@@ -19,6 +19,7 @@
     font-family: Manrope; /* Body */
     font-size: 1.8rem; 
     font-weight: 400; 
+    padding-top: 50px;
     line-height: 22px; 
     z-index: 1;
     color: #FFFFFFFF; /* white */

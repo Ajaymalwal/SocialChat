@@ -7,7 +7,7 @@ function Section2 (){
         <div className="A-section2">
             <div className=" A-section2-1">
                 <h2>Our Team</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit perferendis velit praesentium ipsam neque dignissimos.</p>
+                <p>This is our incridibal team who create this leading website to connecting people together.Currently we are only three members of this team.</p>
             </div>
             <div className="A-section2-2">
               
@@ -15,7 +15,7 @@ function Section2 (){
                     <div className="Team-image"><img src="" alt="" /></div>
                         <div className="Team-info">
                             <h2>Ajay Malwal</h2>
-                            <p>Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</p>
+                            <p>Web developer, Created <b>Dashboard, Inbox</b></p>
                             <div></div>
                         </div>
                 </div>
@@ -24,7 +24,7 @@ function Section2 (){
                     <div className="Team-image"><img src="" alt="" /></div>
                         <div className="Team-info">
                             <h2>Ankush Bhujeja</h2>
-                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit.</p>
+                            <p>Web developer, Created <b>Home page, Login and Sign-up page</b></p>
                             <div></div>
                         </div>
                 </div>
@@ -33,7 +33,7 @@ function Section2 (){
                     <div className="Team-image"><img src="" alt="" /></div>
                         <div className="Team-info">
                             <h2>Rohit Saini</h2>
-                            <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.
+                            <p>Web developer, Created <b>Freature page, About us page</b>
                             </p>
                             <div></div>
                         </div>

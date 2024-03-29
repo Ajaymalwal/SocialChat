@@ -55,15 +55,18 @@
         top: 20px;
     }
     .feature-info h2{
-        font-size: 2rem;
+        font-size: 1.8rem;
        padding-bottom: 2%;
       
     }
     .feature-info p{
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 90%;
         padding-bottom: 5%;
     
+    }
+    .features-img{
+        width: 400px;
     }
 
 }

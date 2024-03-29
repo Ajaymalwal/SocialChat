@@ -4,12 +4,11 @@ import sendicon from "../../Images/inbox/paper-plane.png";
 import Header from "../Dashboard/components/header";
 import Footer from "../Home/components/Footer";
 import backicon from "../../Images/inbox/left-icon.webp";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation,useNavigate} from "react-router-dom";
 import { useEffect, useState } from "react";
 import {  PushMessage, GetRoomMembers } from "../../../backend/Message/RoomMessages";
 import UseMessages from "../../../backend/Message/GetMessages";
 import { autho } from "../../../backend/firebase";
-import threeDot from "../../Images/inbox/three-dot.png";
 import PopupMenu from "../dropdown/Dropdown";
 
 
@@ -24,16 +23,21 @@ function CurrentTime() {
   }
    
 function Inbox() {
-
-    const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
+   
     const  roomId  = location.state.roomId;
+    const roomName = location.state.RoomName;
+    const roomMeberCount = location.state.RoomMemberCount;
     const retrievedMessages = UseMessages(roomId);
+    
 
     const [roomMessages, setRoomMessages] = useState([]);
     const [roomMembers, setRoomMembers] = useState([]);
     const [message, setMessage] = useState('');
 
     useEffect(() => {
+    
       if (retrievedMessages) {
         console.log("in inbox: ",roomMessages)
         setRoomMessages(retrievedMessages); // Set state with retrieved messages
@@ -41,8 +45,11 @@ function Inbox() {
     }, [retrievedMessages]);
   
     useEffect(() => {
-      if (!roomId) return; 
-  console.log(roomId)
+      if (!roomId){
+        navigate("/Dashboard")
+       return; 
+      }
+       console.log(roomId)
    
       const fetchroomData = async()=>{
         try{
@@ -78,10 +85,7 @@ function Inbox() {
       setMessage('');
     };
 
-   
-   
-  
-
+    
     return (
         <>
             <Header />
@@ -104,7 +108,7 @@ function Inbox() {
                                     </div>
                                     <div className="member-info">
                                         <p>{member.name}</p>
-                                        <p>{member.collegeCity}</p>
+                                        <p>{member.UserCity}</p>
                                     </div>
                                 </div>
                             ))
@@ -121,12 +125,12 @@ function Inbox() {
                                     <img src={usericon} alt="" />
                                 </div>
                                 <div className="room-info">
-                                    <p>Room Name</p>
-                                    <p>20 Members</p>
+                                    <p>{roomName}</p>
+                                    <p>{roomMeberCount} Members</p>
                                 </div>
                             </div>
                             <div className="three-dot-container">
-                                  <PopupMenu/>
+                                  <PopupMenu roomId={roomId}/>
                                 </div>
                         </div>
 
@@ -148,7 +152,7 @@ function Inbox() {
     </div>
   ))
 ) : (
-  <div className="message">Loading messages...</div>
+  <div className="message">No Message in this room.   Start Messaging </div>
 )}
 
                           
