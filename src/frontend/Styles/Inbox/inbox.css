@@ -241,7 +241,19 @@
   background: #d21d1d;
 }
 
-@media screen and (max-width:750px) {
-  
-  
+/* Media query for mobile compatibility */
+@media screen and (max-width: 750px) {
+ .inbox-sidebar{
+  display: none;
+ }
+
+  .sidebar-hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
 }

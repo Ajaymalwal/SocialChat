@@ -3,10 +3,6 @@ import {push,ref,onValue} from 'firebase/database';
 import { collection,doc,getDoc } from 'firebase/firestore';
 
 
-
-
-
-
 function PushMessage(messagefile,roomId){
      const messageRef = ref(database,`Rooms/public/${roomId}/messages`)
      push(messageRef,{messagefile})

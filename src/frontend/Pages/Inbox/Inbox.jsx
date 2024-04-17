@@ -35,6 +35,11 @@ function Inbox() {
     const [roomMessages, setRoomMessages] = useState([]);
     const [roomMembers, setRoomMembers] = useState([]);
     const [message, setMessage] = useState('');
+    const [sidebarVisible, setSidebarVisible] = useState(false);
+
+    const toggleSidebar = () => {
+        setSidebarVisible(!sidebarVisible);
+    };
 
     useEffect(() => {
     
@@ -91,7 +96,7 @@ function Inbox() {
             <Header />
             <div className="chatpage-contaienr">
                 <div className="chatpage">
-                    <div className="inbox-sidebar">
+                    <div  className={`inbox-sidebar ${sidebarVisible ? 'sidebar-visible' : 'sidebar-hidden'}`} >
                         <Link to="/Dashboard">
                             {" "}
                             <img src={backicon} alt="" className="backbutton" />{" "}
@@ -99,7 +104,7 @@ function Inbox() {
                         <div className="sidebar-heading">
                             <h2>Members</h2>
                         </div>
-                        <div className="room-members-container">
+                        <div className="room-members-container" >
                         {roomMembers && roomMembers.length > 0 ? ( 
                           roomMembers.map((member,index) => (
                                 <div className="member-container" key={index}>
@@ -129,7 +134,7 @@ function Inbox() {
                                     <p>{roomMeberCount} Members</p>
                                 </div>
                             </div>
-                            <div className="three-dot-container">
+                            <div className="three-dot-container" onClick={toggleSidebar}>
                                   <PopupMenu roomId={roomId}/>
                                 </div>
                         </div>

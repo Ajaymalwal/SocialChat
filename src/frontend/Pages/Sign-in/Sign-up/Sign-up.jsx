@@ -3,20 +3,24 @@ import "../../../Styles/Sign-in/Sign-up.css";
 import Header from "../../Home/components/header";
 import Footer from "../../Home/components/Footer";
 import loginImage from "../../../Images/Login/login-image.png";
-import { createUserWithEmailAndPassword, updateProfile, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, setPersistence, browserLocalPersistence, browserSessionPersistence } from "firebase/auth";
 import { autho, firestoredb } from "../../../../backend/firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Components/loading";
 
 function SignuP() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const navigate = useNavigate();
 
   const signup = async (e) => {
     e.preventDefault();
+
+    setIsButtonDisabled(true);
     const userData = {
       name: e.target.elements.name.value,
       email: e.target.elements.email.value,
@@ -29,7 +33,7 @@ function SignuP() {
 
       // Set persistence based on the "Remember me" checkbox
       const rememberMeCheckbox = e.target.elements.rememberMe;
-      const persistenceType = rememberMeCheckbox.checked ? browserLocalPersistence : 'none';
+      const persistenceType = rememberMeCheckbox.checked ? browserLocalPersistence : browserSessionPersistence;
       await setPersistence(autho, persistenceType);
 
       const userCredentials = await createUserWithEmailAndPassword(autho, email, password);
@@ -38,13 +42,17 @@ function SignuP() {
 
       await updateProfile(user, { displayName: username });
 
-      alert("User created successfully:", user);
+      setTimeout(()=> alert("User created successfully:", user),2000);
       navigate('/Dashboard');
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
 
       alert(`${errorCode}: ${errorMessage}`);
+    }finally {
+      setTimeout(() => {
+        setIsButtonDisabled(false);
+      }, 2000); 
     }
   };
 
@@ -59,7 +67,7 @@ function SignuP() {
               <h2>Let's Get Started</h2>
               <p>Create your account</p>
             </div>
-            <form className="login-form" onSubmit={signup}>
+            <form className="login-form" onSubmit={isButtonDisabled ? null : signup}>
               <input type="text" name="name" placeholder="Enter your name" value={username || ''} onChange={(e) => setUsername(e.target.value)} required />
               <input type="email" name="email" placeholder="Enter your Email" value={email || ''} onChange={(e) => setEmail(e.target.value)} required />
               <input type="password" name="password" placeholder="Enter a strong Password" value={password || ''} onChange={(e) => setPassword(e.target.value)} required autoComplete="new-password" />
@@ -71,7 +79,7 @@ function SignuP() {
                   Remember me
                 </label>
               </div>
-              <button type="submit" id="continue-btn">Continue</button>
+              <button type="submit" id="continue-btn" disabled={isButtonDisabled}>{isButtonDisabled ? <Loading/> : "Continue"}</button>
             </form>
             <div className="login-container-bottom">
               <p>Already have an account?</p><a href="Login">Login</a>
@@ -79,6 +87,7 @@ function SignuP() {
           </div>
         </div>
       </div>
+      
       <Footer />
     </>
   );
