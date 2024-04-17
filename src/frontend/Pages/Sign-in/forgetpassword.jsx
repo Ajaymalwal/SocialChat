@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { autho } from "../../../backend/firebase";
 import { confirmPasswordReset } from "firebase/auth";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../../Styles/Sign-in/Resetpassword.css";
+
 import "../../Styles/Sign-in/Login.css";
 
 function ResetPassword() {
